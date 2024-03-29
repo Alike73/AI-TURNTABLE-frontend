@@ -28,6 +28,8 @@ body {
 :root {
   --size: calc(1vh + 1vw);
 
+  --c-light: hsl(216, 100%, 98%);
+
   --l-sm1: .25rem;
   --l-sm2: .375rem;
   --l-sm3: .5rem;

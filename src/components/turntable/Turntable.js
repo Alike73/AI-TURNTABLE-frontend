@@ -5,6 +5,8 @@ import SpeakerBox from './SpeakerBox';
 import ControlButtons from './ControlButtons';
 import AudioDuration from './AudioDuration';
 import SoundVolume from './SoundVolume';
+import Equalizer2 from './Equalizer2';
+import HomeMade from './HomeMade';
 
 const Turntable = () => {
 
@@ -12,8 +14,10 @@ const Turntable = () => {
         <div className='container'>
             <div className="col-10 col-sm-8 col-lg-7 mt-5 mx-auto">
                 <div className="turntable">
+                    <HomeMade />
                     <SoundVolume />
                     <TurntableArm />
+                    <Equalizer2 />
                     <div className="screw sc_1" />
                     <div className="screw sc_2" />
                     <div className="screw sc_3" />

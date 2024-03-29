@@ -345,8 +345,8 @@
 /* ===Sound-Volume=== */
 .soundVolumeBox {
     position: absolute;
-    top: 31%;
-    left: -18%;
+    top: 28%;
+    left: -19%;
     transform: rotate(-90deg);
     display: flex;
     justify-content: center;
@@ -355,7 +355,7 @@
     z-index: 10;
 }
 
-.soundVolumeBoxTwo {
+/* .soundVolumeBoxTwo {
     position: absolute;
     top: 35%;
     left: -5%;
@@ -363,9 +363,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* box-shadow: inset 0 3px 3px rgba(0, 0, 0, 0.4), inset 0 -2px 3px rgba(255, 255, 255, 0.2); */
+    
     z-index: 10;
-}
+} */
 
 .soundVolume {
     width: 50px;
@@ -381,20 +381,21 @@
 
 .soundVolumeText,
 .soundVolume {
-    /* display: inline-block; */
     transform: rotate(90deg);
+    color: var(--c-light);
     font-size: clamp(12px, calc(var(--size) * 1.2), 16px);
+}
+.soundVolumeText {
+    translate: -20px 0;
 }
 
 .soundVolumeText {
-    width: 80px;
-    height: 35px;
-    padding: 3px 6px;
-    border-radius: 5px;
+    width: 50px;
+    height: 50px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    font-weight: normal;
+    border-radius: 50px;
     /* color: var(--c-turquoise);
     background: var(--c-monitor-bg); */
     /* outline-offset: -2px;
@@ -421,7 +422,7 @@
     align-items: center;
     position: relative;
     border-radius: inherit;
-    height: 0.25em;
+    height: 0.125em;
     width: 17.375em;
     background-image: linear-gradient(#040809, #232728);
     box-shadow: inset 0 0.1875em 0.125em rgba(0, 0, 0, 0.2), 0 0 0 0.0625em #141617, 0 calc(0.0625em + 1px) 0 #5f6060;
@@ -578,5 +579,170 @@
         width: 1.5em;
         height: 1.5em;
     }
+}
+/* ===Equalizer2=== */
+.equalizer_2 {
+	position: absolute;
+	top: 45%;
+    right: 8%;
+	align-items: center;
+	display: flex;
+	height: 80px;
+	padding: .25rem;
+	justify-content: space-between;
+	overflow: hidden;
+	width: 80px;
+	border-radius: .75rem;
+	/* border: 2px solid var(--c-dark);
+	background: var(--c-monitor-bg); */
+	box-shadow: inset 0 0 3px 0px #fff3, 0 0 0 5px #0004, 0 0 3px 2px #000, 0 0 15px 0px #0005, 2px 2px 1px 5px #fff4;
+}
+.equalizer_2 div {
+    background: linear-gradient(0deg, #03bd50 0%, #ff0 50%, rgb(211, 67, 67) 100%);
+    background: linear-gradient(0deg, #4d4d4d, #999999, #bfbfbf);
+    background: linear-gradient(0deg, #333333, #999999, #cccccc);
+	height: 100%;
+	width: 12px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.play-equalizer_2 div {
+	-webkit-animation: equalize 2s infinite;
+			animation: equalize 2s infinite;
+}
+.equalizer_2 div:nth-child(1) {
+	-webkit-animation-delay: -4.6s;
+			animation-delay: -4.6s;
+}
+.equalizer_2 div:nth-child(2) {
+	-webkit-animation-delay: -1s;
+			animation-delay: -1s;
+}
+.equalizer_2 div:nth-child(3) {
+	-webkit-animation-delay: -4.9s;
+			animation-delay: -4.9s;
+}
+.equalizer_2 div:nth-child(4) {
+	-webkit-animation-delay: -3.6s;
+			animation-delay: -3.6s;
+}
+.equalizer_2 div:nth-child(5) {
+	-webkit-animation-delay: -5.9s;
+			animation-delay: -5.9s;
+}
+@-webkit-keyframes equalize {
+	0%, 100% {
+	-webkit-clip-path: inset(73% 0 0 0);
+			clip-path: inset(73% 0 0 0);
+	}
+	10% {
+	-webkit-clip-path: inset(41% 0 0 0);
+			clip-path: inset(41% 0 0 0);
+	}
+	20% {
+	-webkit-clip-path: inset(58% 0 0 0);
+			clip-path: inset(58% 0 0 0);
+	}
+	30% {
+	-webkit-clip-path: inset(5% 0 0 0);
+			clip-path: inset(5% 0 0 0);
+	}
+	40% {
+	-webkit-clip-path: inset(6% 0 0 0);
+			clip-path: inset(6% 0 0 0);
+	}
+	50% {
+	-webkit-clip-path: inset(73% 0 0 0);
+			clip-path: inset(73% 0 0 0);
+	}
+	60% {
+	-webkit-clip-path: inset(6% 0 0 0);
+			clip-path: inset(6% 0 0 0);
+	}
+	70% {
+	-webkit-clip-path: inset(75% 0 0 0);
+			clip-path: inset(75% 0 0 0);
+	}
+	80% {
+	-webkit-clip-path: inset(35% 0 0 0);
+			clip-path: inset(35% 0 0 0);
+	}
+	90% {
+	-webkit-clip-path: inset(40% 0 0 0);
+			clip-path: inset(40% 0 0 0);
+	}
+}
+@keyframes equalize {
+	0%, 100% {
+	-webkit-clip-path: inset(73% 0 0 0);
+			clip-path: inset(73% 0 0 0);
+	}
+	10% {
+	-webkit-clip-path: inset(41% 0 0 0);
+			clip-path: inset(41% 0 0 0);
+	}
+	20% {
+	-webkit-clip-path: inset(58% 0 0 0);
+			clip-path: inset(58% 0 0 0);
+	}
+	30% {
+	-webkit-clip-path: inset(5% 0 0 0);
+			clip-path: inset(5% 0 0 0);
+	}
+	40% {
+	-webkit-clip-path: inset(6% 0 0 0);
+			clip-path: inset(6% 0 0 0);
+	}
+	50% {
+	-webkit-clip-path: inset(73% 0 0 0);
+			clip-path: inset(73% 0 0 0);
+	}
+	60% {
+	-webkit-clip-path: inset(6% 0 0 0);
+			clip-path: inset(6% 0 0 0);
+	}
+	70% {
+	-webkit-clip-path: inset(75% 0 0 0);
+			clip-path: inset(75% 0 0 0);
+	}
+	80% {
+	-webkit-clip-path: inset(35% 0 0 0);
+			clip-path: inset(35% 0 0 0);
+	}
+	90% {
+	-webkit-clip-path: inset(40% 0 0 0);
+			clip-path: inset(40% 0 0 0);
+	}
+}
+
+@media all and (max-width: 820px) {
+	.equalizer_2 {
+		top: 7%;
+		left: 22%;
+		height: 70px;
+		width: 70px;
+	}
+	.equalizer_2 div {
+		width: 6px;
+	}
+}
+
+
+@media all and (max-width: 500px) {
+	.equalizer_2 {
+		top: 3%;
+		left: 68%;
+		height: 50px;
+		width: 50px;
+	}
+	.equalizer_2 div {
+		width: 6px;
+	}
+}
+/* ===HomeMadeLogo=== */
+.homeMade {
+    width: 135px;
+    position: absolute;
+    top: 1%;
+    left: 13%;
 }
 /* ================== */
