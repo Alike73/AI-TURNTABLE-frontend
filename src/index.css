@@ -1,7 +1,7 @@
 @import "~normalize.css/normalize.css";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
-@import './ui-style/ui-turntable.css';
+
 
 html {
   box-sizing: border-box;
@@ -80,6 +80,8 @@ body {
   0 0 0 137px #ffffff10, 0 0 0 139px #1a1a1a, 
   0 0 0 142px #ffffff10, 0 0 0 146px #1a1a1a */
 
+  --record-shadow-sm: 0 0 0 2px #ffffff10, 0 0 0 5px #1a1a1a, 0 0 0 6px #ffffff10, 0 0 0 8px #1a1a1a, 0 0 0 10px #ffffff10, 0 0 0 14px #1a1a1a, 0 0 0 16px #ffffff10, 0 0 0 20px #1a1a1a, 0 0 0 23px #ffffff10, 0 0 0 25px #1a1a1a, 0 0 0 26px #ffffff10, 0 0 0 28px #1a1a1a, 0 0 0 30px #ffffff10, 0 0 0 34px #1a1a1a, 0 0 0 36px #ffffff10, 0 0 0 40px #1a1a1a, 0 0 0 42px #ffffff10, 0 0 0 45px #1a1a1a, 0 0 0 46px #ffffff10, 0 0 0 48px #1a1a1a, 0 0 0 50px #ffffff10, 0 0 0 54px #1a1a1a, 0 0 0 56px #ffffff10;
+
   
   --transition-sm: 125ms ease-in-out;
   --transition-1: 250ms ease-in-out;
@@ -99,3 +101,7 @@ body {
 
   --speaker-bg: url('./assets/images/speakerNet.jpg');
 }
+
+@import './ui-style/keyframes.css';
+
+@import './ui-style/ui-turntable.css';
