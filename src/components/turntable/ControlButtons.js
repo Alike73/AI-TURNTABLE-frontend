@@ -7,12 +7,16 @@ const ControlButtons = () => {
 
     return (
         <div className='control-buttons-group'>
-            <button className="button">
-                <IoPlayOutline className="fs-5" />
-            </button>
-            <button className="button">
-                <IoStopOutline className="fs-5" />
-            </button>
+            <div className="button_wrapper">
+                <button className="button">
+                    <IoPlayOutline className="fs-4 button_ico" />
+                </button>
+            </div>
+            <div className="button_wrapper">
+                <button className="button">
+                    <IoStopOutline className="fs-4 button_ico" />
+                </button>
+            </div>
         </div>
     )
 };

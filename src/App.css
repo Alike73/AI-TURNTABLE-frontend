@@ -105,7 +105,7 @@
     width: 6rem;
   }
   .control-buttons-group {
-    bottom: 5%;
+    bottom: 4%;
   }
   .button {
     padding: var(--l-sm1) var(--l-md1);
