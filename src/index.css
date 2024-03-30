@@ -29,6 +29,9 @@ body {
   --size: calc(1vh + 1vw);
 
   --c-light: hsl(216, 100%, 98%);
+  --c-turquoise: hsl(177, 93%, 47%);
+  --c-label-lg: hsl(210, 11%, 71%);
+  --c-grey: hsl(0, 0%, 50%);
 
   --l-sm1: .25rem;
   --l-sm2: .375rem;

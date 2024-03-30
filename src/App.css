@@ -60,7 +60,7 @@
     width: 100px;
     top: 1%;
     left: 15%;
-    transform: rotate(-38deg);
+    transform: rotate(-33deg);
   }
   .turntable_arm {
     width: 65px;
@@ -78,14 +78,21 @@
     height: 126px;
     box-shadow: var(--record-shadow-sm);
   }
+  .melodyLogo {
+    width: 52px;
+  }
   .audio-duration {
-    bottom: 29.5%;
+    bottom: 30%;
     left: 50%;
   }
   .durationCount {
     width: 45px;
     height: 45px;
     font-size: clamp(8px, calc(var(--size)* 1.2), 12px);
+  }
+  .active_indicator {
+    width: .6rem;
+    height: .6rem;
   }
   .slider-track-2 {
     width: 11.375em;

@@ -4,7 +4,10 @@ const AudioDuration = () => {
 
     return (
         <div className="audio-duration">
-            <span className="durationCount me-3">0:00</span>
+            <div className="durationCount me-3">
+            <span className="active_indicator" />
+            0:00
+            </div>
             <div className="slider-wrapper-2">
                 <div className="slider-container-2">
                     <div className="slider-track-2">
@@ -14,7 +17,7 @@ const AudioDuration = () => {
                     </div>
                 </div>
             </div>
-            <span className="durationCount ms-3">5:50</span>
+            <div className="durationCount ms-3">5:50</div>
         </div>
     )
 };

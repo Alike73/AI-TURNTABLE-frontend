@@ -1,9 +1,9 @@
-import brandLogo from '../../assets/images/marshall-2.png';
+import brandLogo from '../../assets/images/marshall-3.png';
 
 const SpeakerBox = () => {
 
     return (
-        <div className="speakerBox p-3">
+        <div className="speakerBox py-3 px-4">
             <div className="speaker_wrapper">
                 <div className="speaker speaker-play-shadow mb-4" />
             </div>

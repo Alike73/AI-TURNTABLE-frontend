@@ -2,7 +2,7 @@
 .turntable {
     width: 100%;
     height: 780px;
-    background: gray;
+    background: var(--c-grey);
     border-radius: var(--l-md1);
     position: relative;
     /* box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
@@ -92,7 +92,7 @@
     width: 23px;
     height: 23px;
     border-radius: 50%;
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .9);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25),
                 inset 2px 2px 5px rgba(255, 255, 255, 0.5),
                 inset -3px -3px 5px rgba(0, 0, 0, 0.5);
@@ -100,6 +100,28 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.vinyl_sound_name {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    left: 0;
+    text-align: center;
+}
+.melodyLogo {
+    width: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.vinyl_author_name {
+    width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    text-align: center;
 }
 
 /* ---Speakers--- */
@@ -109,7 +131,7 @@
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 10%;
+    bottom: 11%;
     left: 0;
 }
 
@@ -119,8 +141,8 @@
 }
 
 .speaker_wrapper {
-    width: 13rem;
-    height: 13rem;
+    width: 12rem;
+    height: 12rem;
     border-radius: 50%;
     box-shadow: 
         inset 0 0 3px 0px #fff3, 0 0 0 5px #0004, 
@@ -130,7 +152,7 @@
 }
 
 .speaker {
-    width: 13rem;
+    width: 12rem;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: #000;
@@ -184,7 +206,7 @@
 .audio-duration {
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -1%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -242,6 +264,9 @@
     background-image: repeating-conic-gradient(#fff 0deg, #dff5ff 25deg, #a0b6cc 55deg, #7d96af 75deg, #dff5ff 90deg, #7d96af 105deg, #a0b6cc 125deg, #dff5ff 155deg, #fff 180deg);
     box-shadow: 0 -0.5em 0.5em -0.5em rgba(255, 255, 255, 0.8), 0 0.5em 0.25em rgba(0, 0, 0, 0.2), inset 0 0 0 0.125em rgba(125, 150, 175, 0.8), inset 0 0.0625em 0.0625em 0.1875em rgba(255, 255, 255, 0.6);
 }
+.slider-thumb-2:hover {
+    cursor: pointer;
+}
 
 .slider-input-2 {
     -moz-appearance: none;
@@ -280,8 +305,9 @@
 }
 
 .durationCount {
-    width: 50px;
-    height: 50px;
+    position: relative;
+    width: 55px;
+    height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -292,6 +318,18 @@
     /* color: var(--c-turquoise); */
     text-shadow: var(--text-shadow);
     box-shadow: inset 0 0 3px 0px #fff3, 0 0 0 5px #0004, 0 0 3px 2px #000, 0 0 15px 0px #0005, 2px 2px 1px 5px #fff4;
+}
+.active_indicator {
+    width: .8rem;
+    height: .8rem;
+    border-radius: .8rem;
+    border: 1px solid var(--c-label-lg);
+    background: var(--c-turquoise);
+    position: absolute;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 2px 2px 3px #565656, inset -2px -2px 3px #a0a0a0;
 }
 
 /* ===Sound-Volume=== */
@@ -407,6 +445,9 @@
     background-image: repeating-conic-gradient(#fff 0deg, #dff5ff 25deg, #a0b6cc 55deg, #7d96af 75deg, #dff5ff 90deg, #7d96af 105deg, #a0b6cc 125deg, #dff5ff 155deg, #fff 180deg);
     box-shadow: 0 -0.5em 0.5em -0.5em rgba(255, 255, 255, 0.8), 0 0.5em 0.25em rgba(0, 0, 0, 0.2), inset 0 0 0 0.125em rgba(125, 150, 175, 0.8), inset 0 0.0625em 0.0625em 0.1875em rgba(255, 255, 255, 0.6);
 }
+.slider-thumb:hover {
+    cursor: pointer;
+}
 
 .slider-input {
     -moz-appearance: none;
@@ -496,11 +537,11 @@
 
 /* ===HomeMadeLogo=== */
 .homeMade {
-    width: 135px;
+    width: 150px;
     position: absolute;
     top: 1%;
-    left: 13%;
-    transform: rotate(-45deg);
+    left: 11%;
+    transform: rotate(-22deg);
     filter: var(--img-shadow-2);
 }
 /* ================== */
