@@ -32,6 +32,8 @@ body {
   --c-turquoise: hsl(177, 93%, 47%);
   --c-label-lg: hsl(210, 11%, 71%);
   --c-grey: hsl(0, 0%, 50%);
+  --c-brown: hsl(0, 1%, 28%);
+  --c-red: hsl(332, 100%, 41%);
 
   --l-sm1: .25rem;
   --l-sm2: .375rem;
@@ -101,10 +103,14 @@ body {
   --img-shadow-3: drop-shadow(1px 2px 3px rgb(115, 241, 11));
   --img-shadow-4: drop-shadow(1px 2px 1px #8d8282);
   --img-shadow-5: drop-shadow(1px 2px 3px #FFFFFF);
+  --img-shadow-6: drop-shadow(3px 5px 4px #ffee01);
 
   --speaker-bg: url('./assets/images/speakerNet.jpg');
+  --bg-hero: url('./assets/images/mainBannerBG.jpg');
 }
 
 @import './ui-style/keyframes.css';
+
+@import './ui-style/ui-hero.css';
 
 @import './ui-style/ui-turntable.css';

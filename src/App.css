@@ -53,6 +53,10 @@
 }
 
 @media all and (max-width: 500px) {
+  .alienVinyl {
+    width: 250px;
+    margin-top: -30px;
+  }
   .turntable {
     height: 526px;
   }
