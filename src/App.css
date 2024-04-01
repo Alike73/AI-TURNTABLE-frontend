@@ -1,4 +1,9 @@
 
+.main {
+  background: var(--c-light);
+}
+
+
 /* ===AudioDuration-And-Speaker=== */
 @media all and (max-width: 820px) {
   .soundVolumeBox {

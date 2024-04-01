@@ -28,12 +28,17 @@ body {
 :root {
   --size: calc(1vh + 1vw);
 
-  --c-light: hsl(216, 100%, 98%);
+  --c-light: hsl(216, 45%, 98%);
   --c-turquoise: hsl(177, 93%, 47%);
   --c-label-lg: hsl(210, 11%, 71%);
   --c-grey: hsl(0, 0%, 50%);
+  --c-grey-lg: hsl(206, 4%, 35%);
   --c-brown: hsl(0, 1%, 28%);
+  --c-dark: hsl(0, 0%, 5%);
+  --c-dark-md: hsl(243, 17%, 22%);
   --c-red: hsl(332, 100%, 41%);
+  --c-gold-sm: hsl(45, 100%, 50%);
+  --c-gold-md: hsl(45, 60%, 47%);
 
   --l-sm1: .25rem;
   --l-sm2: .375rem;
@@ -112,5 +117,9 @@ body {
 @import './ui-style/keyframes.css';
 
 @import './ui-style/ui-hero.css';
+
+@import './ui-style/ui-search-input.css';
+
+@import './ui-style/ui-vinyl-library.css';
 
 @import './ui-style/ui-turntable.css';

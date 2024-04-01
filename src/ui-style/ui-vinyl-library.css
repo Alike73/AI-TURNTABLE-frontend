@@ -1,0 +1,88 @@
+
+.record_card_wrapper {
+    padding: var(--l-sm4);
+    border-radius: var(--l-sm3);
+    box-shadow: inset 8px 8px 10px #8d8d8d, inset -8px -8px 10px #e8e8e8;
+}
+
+.record_card {
+    padding: var(--l-md1);
+    border-radius: calc(var(--l-md1) - var(--l-sm4));
+    background: var(--c-grey);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.caption-shadow {
+    width: 100%;
+    position: relative;
+    border: 5px solid var(--c-gold-md);
+    border-radius: var(--l-sm4);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+.card_vinyl_img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    outline: 1px solid var(--c-dark);
+    outline-offset: -1px;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+.record_card:hover .card_vinyl_img {
+    transform: translateY(-100px);
+    filter: var(--img-shadow-1);
+    scale: 1.07;
+}
+.caption-shadow figcaption {
+    width: 100%;
+    height: 50%;
+    /* height: calc(var(--l-lg3) * 2); */
+    padding: 10px;
+    color: var(--c-light);
+    text-align: center;
+    text-transform: uppercase;
+    background: #FAAB1B;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), 
+    radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
+    background-blend-mode: multiply, multiply;
+    border-top-left-radius: var(--l-md2);
+    border-top-right-radius: var(--l-md2);
+    border-bottom-left-radius: calc(var(--l-sm4) - 5px);
+    border-bottom-right-radius: calc(var(--l-sm4) - 5px);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    box-shadow: 0 -10px 20px -5px hsla(0, 0%, 0%, .4);
+}
+.record_card_btn_group {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.record_card_btn_group button {
+    border: none;
+    background: var(--c-grey-lg);
+    color: var(--c-light);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-1);
+}
+.record_card_btn_group button .btn_ico {
+    filter: var(--img-shadow-1);
+}
+.play_record_btn:hover {
+    color: var(--c-turquoise);
+    transform: translateY(-2px);
+}
+.btn_group :nth-child(1):hover {
+    color: var(--c-turquoise);
+}
+.btn_group :nth-child(2):hover {
+    color: var(--c-red);
+}
+.card_melody_logo {
+    width: 60px;
+    filter: var(--img-shadow-1);
+}

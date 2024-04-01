@@ -1,6 +1,7 @@
 import React from 'react';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from '../equalizer/Equalizer';
+import dividerRound from '../../assets/images/divider-round-bottom.svg';
 
 const Hero = () => {
 
@@ -10,7 +11,7 @@ const Hero = () => {
             <div className="container col-xxl-8 px-4">
                 <div className="row flex-lg-row-reverse justify-content-center g-5 py-5">
                     
-                    <div className="col-lg-6">
+                    <div className="col-lg-7 p-0">
                         <h1 className="display-1 fw-bold lh-1 mb-3">
                             TurntableTunes
                         </h1>
@@ -23,11 +24,12 @@ const Hero = () => {
                             <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
                         </div> */}
                     </div>
-                    <div className="col-10 col-sm-8 col-lg-6 img_container">
+                    <div className="col-10 col-sm-8 col-lg-5 img_container">
                         <img src={ alienVinyl } className="d-block mx-lg-auto img-fluid alienVinyl" alt="Bootstrap Themes" loading="lazy" />
                     </div>
                 </div>
             </div>
+            <img className='divider_round' src={ dividerRound } alt="divider" />
         </div>
     )
 };
