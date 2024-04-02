@@ -2,6 +2,7 @@
 .record_card_wrapper {
     padding: var(--l-sm4);
     border-radius: var(--l-sm3);
+    border: 2px solid #FFFFFF;
     box-shadow: inset 8px 8px 10px #8d8d8d, inset -8px -8px 10px #e8e8e8;
 }
 
@@ -19,16 +20,43 @@
     border-radius: var(--l-sm4);
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), inset 2px 2px 5px rgba(255, 255, 255, 0.5), inset -3px -3px 5px rgba(0, 0, 0, 0.5);
 }
-.card_vinyl_img {
+.card_vinyl_img_wrapper {
+    position: relative;
+    width: fit-content;
+    height: auto;
+    border-radius: 50%;
+    transition: var(--transition-1);
+}
+.card_vinyl_outer {
     max-width: 100%;
     height: auto;
     display: block;
     outline: 1px solid var(--c-dark);
     outline-offset: -1px;
     border-radius: 50%;
-    transition: var(--transition-1);
 }
-.record_card:hover .card_vinyl_img {
+.card_vinyl_inner {
+    width: 53.5%;
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    border: 8px solid var(--c-dark);
+    border-radius: 50%;
+}
+.record_center_pin {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--c-dark);
+    background: var(--c-label-lg);
+    box-shadow: inset 2px 2px 3px #565656, inset -2px -2px 3px #a0a0a0;
+}
+.record_card:hover .card_vinyl_img_wrapper {
     transform: translateY(-100px);
     filter: var(--img-shadow-1);
     scale: 1.07;
@@ -41,6 +69,7 @@
     color: var(--c-light);
     text-align: center;
     text-transform: uppercase;
+    text-shadow: var(--text-shadow);
     background: #FAAB1B;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), 
     radial-gradient(at top center, rgba(255, 255, 255, 0.40) 0%, rgba(0, 0, 0, 0.40) 120%) #989898;
@@ -60,7 +89,7 @@
     bottom: 0;
     left: 0;
 }
-.record_card_btn_group button {
+.btn_group button {
     border: none;
     background: var(--c-grey-lg);
     color: var(--c-light);
@@ -71,10 +100,40 @@
 }
 .record_card_btn_group button .btn_ico {
     filter: var(--img-shadow-1);
+    transition: var(--transition-1);
+}
+.play_record_btn {
+    position: relative;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    transition: var(--transition-1);
+}
+.play_record_btn_indicator {
+    position: absolute;
+    top: 50%;
+    left: 42%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--c-gold-md);
+    background: transparent;
+    box-shadow: inset 1px 1px 2px #565656, inset -1px -1px 2px #a0a0a0;
+}
+.play_record_btn:active .play_record_btn_indicator {
+    background: var(--c-turquoise);
+}
+.play_record_btn .btn_ico {
+    color: var(--c-gold-md);
+    font-size: clamp(var(--l-lg1), calc(var(--size) * 1.4), var(--l-lg2));
 }
 .play_record_btn:hover {
-    color: var(--c-turquoise);
     transform: translateY(-2px);
+}
+.play_record_btn:hover .btn_ico {
+    color: var(--c-gold-sm);
 }
 .btn_group :nth-child(1):hover {
     color: var(--c-turquoise);

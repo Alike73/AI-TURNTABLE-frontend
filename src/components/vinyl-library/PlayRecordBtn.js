@@ -8,7 +8,8 @@ const PlayRecordBtn = () => {
             type="button" 
             className="btn btn-sm play_record_btn"
         >
-            <IoPlayOutline className="fs-3 btn_ico" />
+            <IoPlayOutline className="btn_ico" />
+            <span className='play_record_btn_indicator' />
         </button>
     )
 };
