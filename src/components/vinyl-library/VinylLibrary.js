@@ -3,7 +3,7 @@ import RecordCard from './RecordCard';
 import SearchInput from '../filter/SearchInput';
 import RecordsFilter from '../filter/RecordsFilter';
 
-const VinylLibrary = () => {
+const VinylLibrary = ({ sounds }) => {
 
     return (
         <div className="vinyl_library py-5">
@@ -12,12 +12,14 @@ const VinylLibrary = () => {
                     <SearchInput />
                 </div>
                 <RecordsFilter />
-                <div className="row justify-content-center gap-5 py-5 px-3 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-5">
-                    <RecordCard />
-                    <RecordCard />
-                    <RecordCard />
-                    <RecordCard />
-                    <RecordCard />
+                <div className="row justify-content-center gap-3 py-5 px-3 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6">
+                    { sounds.map((item) => <RecordCard 
+                        key = { item._id } 
+                        vinylCover = { item.image } 
+                        title = { item.title } 
+                        // category = { item.category }
+                        // soundLink = { item.soundLink } 
+                    />)}
                 </div>
             </div>
         </div>

@@ -84,8 +84,40 @@
     width: 230px;
     height: 230px;
     border-radius: 50%;
-    border: 2px solid turquoise;
+    /* border: 2px solid turquoise; */
     box-shadow: var(--record-shadow-lg);
+}
+
+.vinyl_cover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    border-radius: 230px;
+    border: 2px solid var(--c-gold-md);
+    outline: 8px solid var(--c-dark);
+}
+
+.t_vinyl_title {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#textPath {
+    font-size: clamp(var(--l-sm2), calc(var(--size) * 1.2), var(--l-sm3)); 
+    fill: var(--c-light);
+    text-anchor: middle;
+    filter: var(--img-shadow-1); 
+}
+.dot {
+    fill: var(--c-red);
+    stroke: var(--c-light); /* Border color */
+    stroke-width: 1px; /* Border width */
+    font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-sm4)); 
 }
 
 .center_pin {
@@ -103,13 +135,6 @@
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-.vinyl_sound_name {
-    width: 100%;
-    position: absolute;
-    top: 15%;
-    left: 0;
-    text-align: center;
-}
 .melodyLogo {
     width: 80px;
     position: absolute;
@@ -117,13 +142,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     filter: var(--img-shadow-1);
-}
-.vinyl_author_name {
-    width: 100%;
-    position: absolute;
-    bottom: 10%;
-    left: 0;
-    text-align: center;
 }
 
 /* ---Speakers--- */
