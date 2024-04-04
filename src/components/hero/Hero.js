@@ -1,9 +1,29 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
 
 const Hero = () => {
+
+    const handlePassword = async () => {
+        const { value: password } = await Swal.fire({
+            title: "Enter your admin password",
+            input: "password",
+            inputLabel: "Password",
+            inputPlaceholder: "Enter your password",
+            inputAttributes: {
+            maxlength: "15",
+            autocapitalize: "off",
+            autocorrect: "off"
+            }
+        });
+        if (password === "K@ch@pon20111") {
+            Swal.fire(`Hello Alimzhan: ${password}`);
+        }else {
+            Swal.fire("Wrong Password!","You entered: "+password,"error");
+        }
+    };
 
     return (
         <div className='hero'>
@@ -25,7 +45,13 @@ const Hero = () => {
                         </div> */}
                     </div>
                     <div className="col-10 col-sm-8 col-lg-5 img_container">
-                        <img src={ alienVinyl } className="d-block mx-lg-auto img-fluid alienVinyl" alt="Bootstrap Themes" loading="lazy" />
+                        <img 
+                            src={ alienVinyl } 
+                            className="d-block mx-lg-auto img-fluid alienVinyl" 
+                            alt="Bootstrap Themes" 
+                            loading="lazy" 
+                            onClick={ handlePassword } 
+                        />
                     </div>
                 </div>
             </div>
