@@ -3,8 +3,14 @@ import Swal from 'sweetalert2';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAdminPass, setIsAdmin } from '../../redux/AdminSecureSlice';
 
 const Hero = () => {
+
+    const adminPass = useSelector(getAdminPass);
+    
+    const dispatch = useDispatch();
 
     const handlePassword = async () => {
         const { value: password } = await Swal.fire({
@@ -18,10 +24,12 @@ const Hero = () => {
             autocorrect: "off"
             }
         });
-        if (password === "K@ch@pon20111") {
+        if (password === adminPass) {
             Swal.fire(`Hello Alimzhan: ${password}`);
+            dispatch(setIsAdmin(true));
         }else {
             Swal.fire("Wrong Password!","You entered: "+password,"error");
+            dispatch(setIsAdmin(false));
         }
     };
 

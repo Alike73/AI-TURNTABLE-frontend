@@ -114,6 +114,7 @@ body {
 
   --speaker-bg: url('./assets/images/speakerNet.jpg');
   --bg-hero: url('./assets/images/mainBannerBG.jpg');
+  --bg-modal-body: url('./assets/images/string-pattern.png');
 }
 
 @import './ui-style/keyframes.css';

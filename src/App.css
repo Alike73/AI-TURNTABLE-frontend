@@ -3,6 +3,10 @@
   background: var(--c-light);
 }
 
+.modal-body {
+  background: var(--bg-modal-body);
+}
+
 @media (min-width: 1630px) and (max-width: 1870px) {
   .caption-shadow figcaption span {
     font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-sm4));

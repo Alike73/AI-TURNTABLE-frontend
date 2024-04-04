@@ -9,6 +9,8 @@ const EditDeleteBtnGroup = () => {
             <button 
                 type="button" 
                 className="btn btn-sm me-3"
+                data-bs-toggle="modal" 
+                data-bs-target="#modalEditor"
             >
                 <FaRegEdit className='fs-3 btn_ico' />
             </button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoPlayOutline } from "react-icons/io5";
 
-const PlayRecordBtn = () => {
+const SetTheRecordBtn = () => {
 
     return (
         <button 
@@ -14,4 +14,4 @@ const PlayRecordBtn = () => {
     )
 };
 
-export default PlayRecordBtn;
+export default SetTheRecordBtn;
