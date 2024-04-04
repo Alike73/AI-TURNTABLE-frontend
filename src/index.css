@@ -35,6 +35,8 @@ body {
   --c-grey-lg: hsl(206, 4%, 35%);
   --c-brown: hsl(0, 1%, 28%);
   --c-dark: hsl(0, 0%, 5%);
+  --c-dark-rgba: rgba(0, 0, 0, 0.5);
+  --c-light-rgba: rgba(255, 255, 255, 0.6);
   --c-dark-md: hsl(243, 17%, 22%);
   --c-red: hsl(332, 100%, 41%);
   --c-gold-sm: hsl(45, 100%, 50%);
@@ -115,6 +117,8 @@ body {
 }
 
 @import './ui-style/keyframes.css';
+
+@import './ui-style/ui-scroll-set.css';
 
 @import './ui-style/ui-hero.css';
 

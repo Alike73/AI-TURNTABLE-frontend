@@ -82,14 +82,16 @@
 .caption-shadow figcaption span {
     display: block;
     color: var(--c-light);
-    font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-sm4));
+    font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-md1));
     text-align: center;
     text-transform: uppercase;
     text-shadow: var(--text-shadow);
 }
 .caption-shadow figcaption span::first-letter {
     color: var(--c-gold-sm);
-    font-size: clamp(var(--l-sm4), calc(var(--size) * 1.2), var(--l-md1));
+    font-weight: bold;
+    margin-right: calc(var(--l-sm1) / 2);
+    /* font-size: clamp(var(--l-sm4), calc(var(--size) * 1.2), var(--l-md1)); */
 }
 .record_card_btn_group {
     width: 100%;
@@ -106,10 +108,10 @@
                 inset -3px -3px 5px rgba(0, 0, 0, 0.5);
     transition: var(--transition-1);
 }
-.record_card_btn_group button .btn_ico {
+/* .record_card_btn_group button .btn_ico {
     filter: var(--img-shadow-1);
     transition: var(--transition-1);
-}
+} */
 .play_record_btn {
     position: relative;
     padding: 0;
@@ -123,8 +125,8 @@
     top: 50%;
     left: 42%;
     transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
+    width: 7px;
+    height: 7px;
     border-radius: 10px;
     border: 1px solid var(--c-gold-md);
     background: transparent;
@@ -135,7 +137,9 @@
 }
 .play_record_btn .btn_ico {
     color: var(--c-gold-md);
-    font-size: clamp(var(--l-lg1), calc(var(--size) * 1.4), var(--l-lg2));
+    /* font-size: clamp(var(--l-lg1), calc(var(--size) * 1.4), var(--l-lg2)); */
+    filter: var(--img-shadow-1);
+    transition: var(--transition-1);
 }
 .play_record_btn:hover {
     transform: translateY(-2px);

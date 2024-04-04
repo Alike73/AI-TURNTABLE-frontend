@@ -6,9 +6,9 @@ const PlayRecordBtn = () => {
     return (
         <button 
             type="button" 
-            className="btn btn-sm play_record_btn"
+            className="btn play_record_btn"
         >
-            <IoPlayOutline className="btn_ico" />
+            <IoPlayOutline className="btn_ico fs-1" />
             <span className='play_record_btn_indicator' />
         </button>
     )

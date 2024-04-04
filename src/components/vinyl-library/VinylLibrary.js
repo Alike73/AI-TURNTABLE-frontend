@@ -12,7 +12,7 @@ const VinylLibrary = ({ sounds }) => {
                     <SearchInput />
                 </div>
                 <RecordsFilter />
-                <div className="row justify-content-center gap-3 py-5 px-3 row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xxl-6">
+                <div className="row justify-content-center gap-3 py-5 px-3 row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5">
                     { sounds.map((item) => <RecordCard 
                         key = { item._id } 
                         vinylCover = { item.image } 

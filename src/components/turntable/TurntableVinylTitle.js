@@ -21,7 +21,7 @@ const TurntableVinylTitle = ({vinylTitle}) => {
                 a 40,40 0 1,1 -80,0
                 " />
             <text dy="-0.125em">
-                <textPath id="textPath" href="#circlePath" startOffset="50%" text-anchor="middle" textLength={textLength} >
+                <textPath id="textPath" href="#circlePath" startOffset="50%" textAnchor="middle" textLength={textLength} >
                 <tspan className="dot">•</tspan> &#8220;{vinylTitle}&#8221; <tspan className="dot">•</tspan>       
                 </textPath>
             </text>

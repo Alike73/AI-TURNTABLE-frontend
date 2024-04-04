@@ -23,7 +23,7 @@ const RecordCard = ({ vinylCover, title}) => {
                             <div className="d-flex justify-content-between align-items-center record_card_btn_group px-3 pb-2">
                                 <PlayRecordBtn />
                                 <img className='card_melody_logo' src={ melodyLogo } alt="melody logo" />
-                                {/* <EditDeleteBtnGroup /> */}
+                                <EditDeleteBtnGroup />
                             </div>
                         </figcaption>
                     </figure>

@@ -1,6 +1,6 @@
 import React from 'react';
 import alienVinyl from '../../assets/images/vinylRecord.png';
-import Equalizer from '../equalizer/Equalizer';
+import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
 
 const Hero = () => {
