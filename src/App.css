@@ -114,7 +114,11 @@
     position: absolute;
     top: 11%;
     right: 0%;
-    transform-origin: 114px 165px;
+    transform-origin: 70px 102px;
+  }
+  .vinyl_base {
+    width: 210px;
+    height: 210px;
   }
   .vinylOuter {
     width: 234px;
@@ -177,7 +181,8 @@
     bottom: 2.3%;
     left: 3.3%;
   }
-  .center_pin {
+  .center_pin,
+  .vinyl__base_spin {
     width: 14px;
     height: 14px;
   }

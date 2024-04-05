@@ -20,7 +20,8 @@
     position: absolute;
     top: 3%;
     right: 3%;
-    transform-origin: 114px 165px;
+    transform-origin: 70px 102px;
+    transform: rotate(25deg);
     z-index: 10;
     transition: transform 2s ease;
     filter: var(--img-shadow-1);
@@ -65,6 +66,39 @@
     transform: rotate(90deg);
 }
 
+.vinyl_base {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate( -50%, -50% ) rotate(45deg);
+    width: 450px;
+    height: 450px;
+    border-radius: 100%;
+    background-color: var(--c-dark);
+    background-image: var(--bg-vinyl-base);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.vinyl__base_spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--c-dark);
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25),
+                inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+                inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
 .vinylOuter {
     width: 478px;
     height: 478px;
@@ -77,6 +111,38 @@
     justify-content: center;
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    z-index: 2;
+}
+
+.vinylOuter.active {
+    -webkit-animation: tilt-in-top-active 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation: tilt-in-top-active 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            animation-delay: 0.6s;
+}
+@-webkit-keyframes tilt-in-top-active {
+    0% {
+        -webkit-transform: rotateY(30deg) translate(-50%, -800px) skewY(-30deg);
+                transform: rotateY(30deg) translate(-50%, -800px) skewY(-30deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotate(360deg) rotateY(0deg) translate(-50%, -50%) skewY(0deg);
+                transform: rotate(360deg) rotateY(0deg) translate(-50%, -50%) skewY(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes tilt-in-top-active {
+    0% {
+        -webkit-transform: rotateY(30deg) translate(-50%, -800px) skewY(-30deg);
+                transform: rotateY(30deg) translate(-50%, -800px) skewY(-30deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotate(360deg) rotateY(0deg) translate(-50%, -50%) skewY(0deg);
+                transform: rotate(360deg) rotateY(0deg) translate(-50%, -50%) skewY(0deg);
+        opacity: 1;
+    }
 }
 
 .vinylInner {

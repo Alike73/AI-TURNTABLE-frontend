@@ -36,7 +36,7 @@ body {
   --c-brown: hsl(0, 1%, 28%);
   --c-dark: hsl(0, 0%, 5%);
   --c-dark-rgba: rgba(0, 0, 0, 0.5);
-  --c-light-rgba: rgba(255, 255, 255, 0.6);
+  --c-light-rgba: rgba(255, 255, 255, 0.8);
   --c-dark-md: hsl(243, 17%, 22%);
   --c-red: hsl(332, 100%, 41%);
   --c-gold-sm: hsl(45, 100%, 50%);
@@ -115,6 +115,7 @@ body {
   --speaker-bg: url('./assets/images/speakerNet.jpg');
   --bg-hero: url('./assets/images/mainBannerBG.jpg');
   --bg-modal-body: url('./assets/images/string-pattern.png');
+  --bg-vinyl-base: url('./assets/images/platter-for-vinyl1.png');
 }
 
 @import './ui-style/keyframes.css';

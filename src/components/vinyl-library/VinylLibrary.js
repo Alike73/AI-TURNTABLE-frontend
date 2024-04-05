@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import RecordCard from './RecordCard';
 import SearchInput from '../filter/SearchInput';
 import RecordsFilter from '../filter/RecordsFilter';
@@ -9,6 +9,11 @@ import OpenEditorBtn from '../hero/OpenEditorBtn';
 const VinylLibrary = ({ sounds }) => {
 
     const isAdmin = useSelector(getAdmin);
+    const [activeRecordId, setActiveRecordId] = useState(null); // State to track active record ID
+
+    const handleSetActiveRecord = (recordId) => {
+        setActiveRecordId(recordId);
+    };
 
     return (
         <div className="vinyl_library py-5">
@@ -23,8 +28,11 @@ const VinylLibrary = ({ sounds }) => {
                         key = { item._id } 
                         vinylCover = { item.image } 
                         title = { item.title } 
+                        soundLink = { item.soundLink }
+                        recordId={item._id}
+                        isActive={activeRecordId === item._id} // Pass isActive prop
+                        setActiveRecord={handleSetActiveRecord} // Pass setActiveRecord function 
                         // category = { item.category }
-                        // soundLink = { item.soundLink } 
                     />)}
                 </div>
             </div>

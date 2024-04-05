@@ -1,10 +1,11 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAdminPass, setIsAdmin } from '../../redux/AdminSecureSlice';
 import Swal from 'sweetalert2';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { getAdminPass, setIsAdmin } from '../../redux/AdminSecureSlice';
+
 
 const Hero = () => {
 

@@ -1,20 +1,20 @@
+import { useSelector } from 'react-redux';
 import melodyLogo from '../../assets/images/melody.png';
-import defVinylImg from '../../assets/vinylImages/Mozart-modified.png';
 import TurntableVinylTitle from './TurntableVinylTitle';
+import { getFadeVinyl, getVinylCover } from '../../redux/VinylRecordSlice';
 
 const TurntableVinyl = () => {
 
-    // --->Fixe letter, its come from map of vinyl title 
-    // and goes to the TurntableVinyl = ({vinylTitle}) =>
-    const vinylTitle = `Track Title Goes Here Track Title Goes`;
+    const vinylCover = useSelector(getVinylCover);
+    const fadeVinyl = useSelector(getFadeVinyl);
 
     return (
-        <div className="vinylOuter">
+        <div className={ `vinylOuter ${ fadeVinyl ? "active" : "" } ` }>
             <div className="vinylInner">
                 <div className="center_pin" />
                 <img 
                     className="vinyl_cover" 
-                    src={ defVinylImg } 
+                    src={ vinylCover } 
                     alt="Vinyl cover" 
                 />
                 <img 
@@ -22,7 +22,7 @@ const TurntableVinyl = () => {
                     src={ melodyLogo } 
                     alt="melody logo" 
                 />
-                <TurntableVinylTitle vinylTitle = { vinylTitle } />
+                <TurntableVinylTitle />
             </div>
         </div>
     )

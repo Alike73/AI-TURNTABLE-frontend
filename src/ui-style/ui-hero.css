@@ -33,6 +33,7 @@ h1 {
 
 .img_container {
     perspective: 1000px;
+	position: relative;
 }
 @keyframes rotateAlienVinyl {
     from {
@@ -50,6 +51,7 @@ h1 {
     animation: rotateAlienVinyl 6s linear infinite;
     border-radius: 50%;
     border: 4px solid var(--c-turquoise);
+	z-index: 12;
 }
 
 .open_editor_btn {
@@ -60,15 +62,41 @@ h1 {
 }
 
 /* ===Equalizer=== */
-#box{	
-    width: 150px;
-	height: 150px;
+.top_equalizer_wrapper {
+	width: fit-content;
+	height: fit-content;
 	position:absolute;
-    top: 67%;
+    top: 62%;
 	left: 50%;
-	text-align: center;
 	transform: translate(-50%, 0%);
 }
+.top_svg {
+	animation: top-svg-title-spin infinite 30s linear;
+}
+#textPathTop {
+    font-size: clamp(var(--l-sm2), calc(var(--size) * 1.2), var(--l-sm3)); 
+    fill: var(--c-light-rgba);
+    text-anchor: middle;
+	text-shadow: var(--text-shadow);
+}
+@keyframes top-svg-title-spin {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
+#box {	
+    width: 150px;
+	height: 150px;
+	/* position:absolute;
+    top: 67%;
+	left: 50%; */
+	text-align: center;
+	/* transform: translate(-50%, 0%); */
+}
+
 #circle{
 	width: 100%;
 	height: 100%;
