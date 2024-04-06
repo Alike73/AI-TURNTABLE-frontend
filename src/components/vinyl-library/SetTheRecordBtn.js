@@ -2,6 +2,7 @@ import React from 'react';
 import { IoPlayOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { getFadeVinyl, setFadeVinyl, setVinylCover, setVinylRecordLink, setVinylTitle } from '../../redux/VinylRecordSlice';
+import { setIsPlaying } from '../../redux/AudioSlice';
 
 const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord }) => {
 
@@ -11,6 +12,8 @@ const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, set
     let fadeTimeout;
 
     const handleSetVinyl = () => {
+
+        dispatch(setIsPlaying(false))
 
         setActiveRecord(recordId); // Set the active record ID
 
