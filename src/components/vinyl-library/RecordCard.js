@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { getAdmin } from '../../redux/AdminSecureSlice';
 import vinylRecord from '../../assets/images/vinylRecordDonat.png';
@@ -7,7 +7,8 @@ import melodyLogo from '../../assets/images/melody.png';
 import SetTheRecordBtn from './SetTheRecordBtn';
 import redLight from '../../assets/images/tt_lighton-withe.png';
 
-const RecordCard = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord }) => {
+
+const RecordCard = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord, audioRef }) => {
 
     const isAdmin = useSelector(getAdmin);
 
@@ -34,7 +35,8 @@ const RecordCard = ({ vinylCover, title, soundLink, recordId, isActive, setActiv
                                     soundLink = { soundLink }
                                     recordId = { recordId }
                                     isActive={isActive} // Pass isActive prop
-                                    setActiveRecord={setActiveRecord} // Pass setActiveRecord function 
+                                    setActiveRecord={setActiveRecord} // Pass setActiveRecord function
+                                    audioRef = { audioRef } 
                                 />
                                 <img className='card_melody_logo' src={ melodyLogo } alt="melody logo" />
                                 { isAdmin && <EditDeleteBtnGroup /> }

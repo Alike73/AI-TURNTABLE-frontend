@@ -22,7 +22,7 @@
 }
 .red-light {
     position: absolute;
-    top: 22%;
+    top: 30%;
     left: 50%;
     transform: translate(-47%, -50%) rotate(45deg);
     filter: var(--img-shadow-3);
@@ -69,11 +69,12 @@
     scale: 1.07;
 }
 .card_vinyl_img_wrapper.active {
-    /* transform: translateY(-100px); */
+    transform: translateY(-100px);
     filter: var(--img-shadow-1);
     scale: 1.07;
     animation: card-vinyl-spin infinite 20s linear;
 }
+
 @keyframes card-vinyl-spin {
     from {
       transform: translateY(-100px) rotate(0deg);
@@ -158,8 +159,8 @@
     top: 50%;
     left: 42%;
     transform: translate(-50%, -50%);
-    width: 7px;
-    height: 7px;
+    width: 10px;
+    height: 10px;
     border-radius: 10px;
     border: 1px solid var(--c-gold-md);
     background: transparent;
@@ -173,7 +174,7 @@
 }
 .play_record_btn .btn_ico {
     color: var(--c-gold-md);
-    /* font-size: clamp(var(--l-lg1), calc(var(--size) * 1.4), var(--l-lg2)); */
+    font-size: clamp(var(--l-lg2), calc(var(--size) * 1.4), var(--l-lg3));
     filter: var(--img-shadow-1);
     transition: var(--transition-1);
 }

@@ -7,7 +7,7 @@ const HeroVinylTitleSvg = () => {
     const vinylTitle = useSelector(getVinylTitle);
 
     const [textLength, setTextLength] = useState(0);
-    const MAX_TEXT_LENGTH = 251.33;
+    const MAX_TEXT_LENGTH = 231.33;
 
     useEffect(() => {
         const textPathElement = document.getElementById('textPathTop');

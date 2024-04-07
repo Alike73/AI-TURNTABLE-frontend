@@ -2,9 +2,9 @@ import React from 'react';
 import { IoPlayOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { getFadeVinyl, setFadeVinyl, setVinylCover, setVinylRecordLink, setVinylTitle } from '../../redux/VinylRecordSlice';
-import { setIsPlaying } from '../../redux/AudioSlice';
+import { setActiveArm, setIsPlaying } from '../../redux/AudioSlice';
 
-const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord }) => {
+const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord, audioRef }) => {
 
     const dispatch = useDispatch();
     const fadeVinyl = useSelector(getFadeVinyl);
@@ -13,7 +13,12 @@ const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, set
 
     const handleSetVinyl = () => {
 
+        const audio = audioRef.current;
+        audio.pause();
+        audio.currentTime = 0;
+
         dispatch(setIsPlaying(false))
+        dispatch(setActiveArm(false));
 
         setActiveRecord(recordId); // Set the active record ID
 
@@ -49,7 +54,7 @@ const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, set
             className="btn play_record_btn"
             onClick={ handleSetVinyl }
         >
-            <IoPlayOutline className="btn_ico fs-1" />
+            <IoPlayOutline className="btn_ico" />
             <span className={ `play_record_btn_indicator ${ isActive ? "active" : "" }` } />
         </button>
     )

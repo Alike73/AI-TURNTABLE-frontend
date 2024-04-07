@@ -98,7 +98,10 @@ const Main = () => {
             <Editor />
             <ScrollSet />
             <Hero />
-            <VinylLibrary sounds = { sounds } />
+            <VinylLibrary 
+                audioRef = { audioRef } 
+                sounds = { sounds }
+            />
             <Turntable
                 handlePlayPause = { handlePlayPause } 
                 handleStop = { handleStop } 

@@ -28,7 +28,7 @@
 
 @media all and (min-width: 1400px) {
   .card_melody_logo {
-    width: 38px;
+    width: 52px;
   }
 }
 
@@ -110,11 +110,14 @@
     transform: rotate(-33deg);
   }
   .turntable_arm {
-    width: 65px;
+    width: 66px;
     position: absolute;
     top: 11%;
     right: 0%;
-    transform-origin: 70px 102px;
+    transform-origin: 33px 50px;
+  }
+  .turntable_arm.active {
+    transform: rotate(18deg);
   }
   .vinyl_base {
     width: 210px;
@@ -266,9 +269,17 @@
   .card_melody_logo {
     width: 38px;
   }
-  /* .play_record_btn .btn_ico {
+  .play_record_btn .btn_ico {
     font-size: clamp(var(--l-lg1), calc(var(--size) * 1.4), var(--l-lg2));
-  } */
+  }
+  .play_record_btn_indicator {
+    width: 7px;
+    height: 7px;
+  }
+  .red-light {
+    width: 90%;
+    top: 20%;
+  }
 }
 
 /* Media queries for adjusting breakpoints */

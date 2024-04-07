@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import { getAdmin } from '../../redux/AdminSecureSlice';
 import OpenEditorBtn from '../hero/OpenEditorBtn';
 
-const VinylLibrary = ({ sounds }) => {
+const VinylLibrary = ({ sounds, audioRef }) => {
 
     const isAdmin = useSelector(getAdmin);
     const [activeRecordId, setActiveRecordId] = useState(null); // State to track active record ID
@@ -29,9 +29,10 @@ const VinylLibrary = ({ sounds }) => {
                         vinylCover = { item.image } 
                         title = { item.title } 
                         soundLink = { item.soundLink }
-                        recordId={item._id}
-                        isActive={activeRecordId === item._id} // Pass isActive prop
-                        setActiveRecord={handleSetActiveRecord} // Pass setActiveRecord function 
+                        recordId={ item._id }
+                        isActive={ activeRecordId === item._id } // Pass isActive prop
+                        setActiveRecord={ handleSetActiveRecord } // Pass setActiveRecord function
+                        audioRef = { audioRef }
                         // category = { item.category }
                     />)}
                 </div>

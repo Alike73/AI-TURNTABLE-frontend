@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getFadeVinyl, getVinylCover } from '../../redux/VinylRecordSlice';
 import { getIsPlayingAudio, getResetAnimation, setResetAnimation } from '../../redux/AudioSlice';

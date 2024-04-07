@@ -5,13 +5,14 @@ import Swal from 'sweetalert2';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
+import { getIsPlayingAudio } from '../../redux/AudioSlice';
 
 
 const Hero = () => {
 
     const adminPass = useSelector(getAdminPass);
-    
     const dispatch = useDispatch();
+    const isPlaying = useSelector(getIsPlayingAudio);
 
     const handlePassword = async () => {
         const { value: password } = await Swal.fire({
@@ -45,6 +46,7 @@ const Hero = () => {
                             TurntableTunes
                         </h1>
                         
+                        
                         {/* <p className="lead">
                             Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
                         </p> */}
@@ -56,7 +58,7 @@ const Hero = () => {
                     <div className="col-10 col-sm-8 col-lg-5 img_container">
                         <img 
                             src={ alienVinyl } 
-                            className="d-block mx-lg-auto img-fluid alienVinyl" 
+                            className={ `d-block mx-lg-auto img-fluid alienVinyl ${ isPlaying ? "active" : "" }` } 
                             alt="Bootstrap Themes" 
                             loading="lazy" 
                             onClick={ handlePassword } 
