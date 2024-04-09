@@ -1,11 +1,13 @@
 import React from 'react';
 
-const FormCategoryOption = ({ musicCategory }) => {
-
-    //  value={ musicCategory }
+const FormCategoryOption = ({ musicCategory, category }) => {
 
     return (
-        <option>{ musicCategory }</option>
+        <option 
+            className={ category === musicCategory ? "d-none" : "d-block" }
+        >
+            { musicCategory }
+        </option>
     )
 };
 

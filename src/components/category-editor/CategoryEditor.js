@@ -6,13 +6,16 @@ const CategoryEditor = ({ musicCategory, setMusicCategory, handleCategorySubmit,
     const [isCategoryFocused, setCategoryFocused] = useState(false);
 
     const btnText = editingMusicCategory ? "Save changes" : "Add category";
+    const headerTitleText = editingMusicCategory ? "Editing current category" : "Add a NEW category";
 
     return (
         <div className="modal fade" id="categoryEditor" tabIndex="-1" aria-labelledby="categoryEditorLabel" aria-hidden="true">
             <div className="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div className="modal-content">
                     <div className="modal-header">
-                        <h3 className="modal-title fs-5" id="categoryEditorLabel">Category Editor</h3>
+                        <h3 className="modal-title fs-5" id="categoryEditorLabel">
+                            { headerTitleText }
+                        </h3>
                         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div className="modal-body">

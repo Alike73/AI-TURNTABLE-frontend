@@ -5,8 +5,12 @@ import RecordsFilter from '../filter/RecordsFilter';
 import { useSelector } from 'react-redux';
 import { getAdmin } from '../../redux/AdminSecureSlice';
 import OpenEditorBtn from '../hero/OpenEditorBtn';
+import { deleteSound } from '../../api/FetchRecords';
 
-const VinylLibrary = ({ sounds, audioRef }) => {
+const VinylLibrary = ({ 
+    sounds, setSounds, audioRef, updatingInInput, 
+    setImage, setTitle, setCategory, setSoundLink, 
+    setEditing, listOfCategories, setListOfCategories }) => {
 
     const isAdmin = useSelector(getAdmin);
     const [activeRecordId, setActiveRecordId] = useState(null); // State to track active record ID
@@ -21,8 +25,18 @@ const VinylLibrary = ({ sounds, audioRef }) => {
                 <div className="search_input_box mx-auto">
                     <SearchInput />
                 </div>
-                <RecordsFilter />
-                { isAdmin && <OpenEditorBtn /> }
+                <RecordsFilter
+                    listOfCategories = { listOfCategories }
+                    setListOfCategories = { setListOfCategories }
+                />
+                { isAdmin && <OpenEditorBtn 
+                    setImage = { setImage }
+                    setTitle = { setTitle }
+                    setCategory = { setCategory }
+                    setSoundLink= { setSoundLink }
+                    setEditing = { setEditing }
+                    setListOfCategories = { setListOfCategories }
+                /> }
                 <div className="row justify-content-center gap-3 py-5 px-3 row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-5">
                     { sounds.map((item) => <RecordCard 
                         key = { item._id } 
@@ -33,6 +47,8 @@ const VinylLibrary = ({ sounds, audioRef }) => {
                         isActive={ activeRecordId === item._id } // Pass isActive prop
                         setActiveRecord={ handleSetActiveRecord } // Pass setActiveRecord function
                         audioRef = { audioRef }
+                        updatingInInput = {() => updatingInInput(item._id, item.image, item.title, item.category, item.soundLink)}
+                        deleteSound={() => deleteSound(item._id, setSounds)}
                         // category = { item.category }
                     />)}
                 </div>

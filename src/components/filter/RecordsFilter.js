@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import { addMusicCategory, deleteMusicCategory, editMusicCategory, getMusicCategories } from '../../api/FetchMusicCategory';
+import React, { useState } from 'react'
+import { addMusicCategory, deleteMusicCategory, editMusicCategory } from '../../api/FetchMusicCategory';
 import Swal from 'sweetalert2';
 import CategoryBtn from './CategoryBtn';
 import CategoryEditor from '../category-editor/CategoryEditor';
 
-const RecordsFilter = () => {
+const RecordsFilter = ({ listOfCategories, setListOfCategories }) => {
 
-    const [listOfCategories, setListOfCategories] = useState([]);
+    // const [listOfCategories, setListOfCategories] = useState([]);
     const [musicCategory, setMusicCategory] = useState("");
     const [musicCategoryId, setMusicCategoryId] = useState("");
     const [editingMusicCategory, setEditingMusicCategory] = useState(false);
 
-    useEffect(() => {
-        getMusicCategories(setListOfCategories)
-    }, []);
+    // useEffect(() => {
+    //     getMusicCategories(setListOfCategories)
+    // }, []);
 
     const updatingInCategoryInput = (_id, musicCategory) => {
         setMusicCategoryId(_id)
@@ -62,17 +62,11 @@ const RecordsFilter = () => {
                 key = { item._id }
                 itemIndex = { index + 1 } 
                 musicCategory = { item.musicCategory }
+                setMusicCategory = { setMusicCategory }
+                setEditingMusicCategory = { setEditingMusicCategory }
                 updatingInCategoryInput = {() => updatingInCategoryInput(item._id, item.musicCategory)}
                 deleteMusicCategory={() => deleteMusicCategory(item._id, setListOfCategories)} 
             />)}
-
-            {/* <CategoryBtn />
-            <CategoryBtn />
-            <CategoryBtn />
-            <CategoryBtn />
-            <CategoryBtn />
-            <CategoryBtn />
-            <CategoryBtn /> */}
         </div>
     )
 };

@@ -21,8 +21,8 @@ const addSound = (image, setImage, title, setTitle, category, setCategory, sound
     })
 }
 
-const editSound = (itemId, image, setImage, title, setTitle, category, setCategory, soundLink, setSoundLink, setEditing, setSounds) => {
-    axios.put(`${myURL}/editSound`, { _id: itemId, image, title, category, soundLink })
+const editSound = (recordId, image, setImage, title, setTitle, category, setCategory, soundLink, setSoundLink, setEditing, setSounds) => {
+    axios.put(`${myURL}/editSound`, { _id: recordId, image, title, category, soundLink })
     .then((data) => {
         console.log(data)
         setImage('')

@@ -5,7 +5,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { FaRegTrashCan } from "react-icons/fa6";
 import { IoMdAddCircleOutline } from "react-icons/io";
 
-const CategoryBtn = ({ itemIndex, musicCategory, updatingInCategoryInput, deleteMusicCategory }) => {
+const CategoryBtn = ({ itemIndex, musicCategory, setMusicCategory, setEditingMusicCategory, updatingInCategoryInput, deleteMusicCategory }) => {
 
     const isAdmin = useSelector(getAdmin);
 
@@ -32,6 +32,11 @@ const CategoryBtn = ({ itemIndex, musicCategory, updatingInCategoryInput, delete
         });
     }
 
+    const handleOpenCategoryEditor = () => {
+        setMusicCategory("")
+        setEditingMusicCategory(false)
+    }
+
     return (
         <div>
             <div className="category_button_wrapper">
@@ -50,7 +55,12 @@ const CategoryBtn = ({ itemIndex, musicCategory, updatingInCategoryInput, delete
                             <FaRegTrashCan className="fs-5 text-danger c-icon" onClick={ handleCategoryDelete } />
                         </div>
                         <div className="d-flex justify-content-center py-2">
-                            <IoMdAddCircleOutline className="fs-5 text-primary c-icon" data-bs-toggle="modal" data-bs-target="#categoryEditor" />
+                            <IoMdAddCircleOutline 
+                                className="fs-5 text-primary c-icon" 
+                                data-bs-toggle="modal" 
+                                data-bs-target="#categoryEditor"
+                                onClick={ handleOpenCategoryEditor } 
+                            />
                         </div>
                     </div>
                 }
