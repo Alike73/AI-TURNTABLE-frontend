@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getMusicCategories } from '../../api/FetchMusicCategory';
+import FormCategoryOption from './FormCategoryOption';
 
 const EditorForm = () => {
+
+    const [categoriesOptions, setCategoriesOptions] = useState([]);
+    useEffect(() => {
+        getMusicCategories(setCategoriesOptions)
+    }, []);
 
     return (
         <form>
@@ -13,8 +20,13 @@ const EditorForm = () => {
                 <input type="text" className="form-control" id="vinyl-title" />
             </div>
             <div className="mb-3">
-                <label htmlFor="vinyl-category" className="col-form-label">Music category:</label>
-                <input type="text" className="form-control" id="vinyl-category" />
+                <label htmlFor="vinyl-category" className="col-form-label">Select music category:</label>
+                <select id='vinyl-category' className="form-select form-select-lg mb-3" aria-label="Large select example">
+                    { categoriesOptions.slice(1).map((item) => <FormCategoryOption 
+                        key = { item._id }
+                        musicCategory = { item.musicCategory } 
+                    />)}
+                </select>
             </div>
             <div className="mb-3">
                 <label htmlFor="vinyl-sound" className="col-form-label">Record sound link:</label>

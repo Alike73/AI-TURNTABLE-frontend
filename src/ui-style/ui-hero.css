@@ -7,7 +7,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: grayscale(50%);
+    /* filter: grayscale(50%); */
     position: relative;
 }
 .divider_round {
@@ -46,7 +46,7 @@ h1 {
 
 .alienVinyl {
     width: 500px;
-    margin-top: -100px;
+    /* margin-top: -100px; */
     transform: rotateY(-70deg) rotateX(70deg);
     /* animation: rotateAlienVinyl 6s linear infinite; */
     border-radius: 50%;
@@ -69,12 +69,16 @@ h1 {
 	width: fit-content;
 	height: fit-content;
 	position:absolute;
-    top: 62%;
+    top: 67%;
 	left: 50%;
 	transform: translate(-50%, 0%);
 }
 .top_svg {
 	animation: top-svg-title-spin infinite 30s linear;
+	animation-play-state: running;
+}
+.top_svg_paused {
+    animation-play-state: paused;
 }
 #textPathTop {
     font-size: clamp(var(--l-sm2), calc(var(--size) * 1.2), var(--l-sm3)); 
@@ -211,4 +215,63 @@ h1 {
 	84% {padding-bottom: 65%}
 	100% {padding-bottom: 15%}
 }
-/* =============== */
+
+/* ===Hero-Vinyl-Audio-Controls=== */
+.hero_btn {
+	border: none;
+}
+.hero_ico {
+	color: var(--c-light);
+	filter: var(--img-shadow-4);
+}
+.hero_range_count_wrapper {
+	margin-bottom: -15px;
+}
+.hero_range_count_wrapper small {
+	color: var(--c-light);
+	filter: var(--img-shadow-1);
+	/* text-shadow: var(--text-shadow); */
+}
+.range {
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right, #cc181e 0%, #cc181e calc((100% * var(--progress)) - 5px), #777 calc((100% * var(--progress)) - 5px), #777 calc(100% * var(--progress)), #444 calc(100% * var(--progress)), #444 100%);
+    cursor: pointer;
+    height: 4px;
+    margin: 0;
+    transition: 0.1s ease-in;
+    vertical-align: bottom;
+    width: 100%;
+}
+
+.wrap {
+    margin-top: 0;
+}
+
+.wrap:hover .range {
+    height: 4px;
+}
+
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #aeaeae;
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 5px #eaeaea;
+    height: 10px;
+    transition: 0.1s ease-in;
+    width: 10px;
+}
+
+.wrap:hover .range::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+}
+
+.loaded .range,
+.loaded .range::-webkit-slider-thumb {
+    transition: 0.1s ease-in;
+}
+
+:focus {
+    outline: none;
+}

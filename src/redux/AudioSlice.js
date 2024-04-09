@@ -15,6 +15,7 @@ export const audioSlice = createSlice({
         volume: 50,
         duration: 0,
         isSeeking: false,
+        hovered: false,
     },
     reducers: {
         selectRecord: (state, action) => {
@@ -47,6 +48,9 @@ export const audioSlice = createSlice({
         setIsSeeking: (state, action) => {
             state.isSeeking = action.payload;
         },
+        setHovered: (state, action) => {
+            state.hovered = action.payload;
+        },
     },
     
 });
@@ -61,9 +65,11 @@ export const getVolume = state => state.audioItems.volume;
 export const getSelectedRecord = state => state.audioItems.selectedRecord;
 export const getDuration = state => state.audioItems.duration;
 export const getIsSeeking = state => state.audioItems.isSeeking;
+export const getHovered = state => state.audioItems.hovered;
 
 export const { 
     setIsPlaying, setPlayEqualizer, setActiveArm, 
     setCurrentTime, setShowHeroPlayer, 
-    setResetAnimation, setVolume, selectRecord, setDuration, setIsSeeking } = audioSlice.actions;
+    setResetAnimation, setVolume, selectRecord, 
+    setDuration, setIsSeeking, setHovered } = audioSlice.actions;
 export default audioSlice.reducer;

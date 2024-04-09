@@ -113,7 +113,7 @@ body {
   --img-shadow-6: drop-shadow(3px 5px 4px #ffee01);
 
   --speaker-bg: url('./assets/images/speakerNet.jpg');
-  --bg-hero: url('./assets/images/mainBannerBG.jpg');
+  --bg-hero: url('./assets/images/AppBg1.jpg');
   --bg-modal-body: url('./assets/images/string-pattern.png');
   --bg-vinyl-base: url('./assets/images/platter-for-vinyl1.png');
 }

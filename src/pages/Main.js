@@ -10,6 +10,8 @@ import ScrollSet from '../components/ScrollSet/ScrollSet';
 import Editor from '../components/editor/Editor';
 import { setVinylCover, setVinylRecordLink, setVinylTitle } from '../redux/VinylRecordSlice';
 import { getIsPlayingAudio, setActiveArm, setCurrentTime, setIsPlaying, setPlayEqualizer, setResetAnimation, setShowHeroPlayer } from '../redux/AudioSlice';
+import OpenFAQsBtn from '../components/faqs/OpenFAQsBtn';
+import ModalFAQs from '../components/faqs/ModalFAQs';
 
 const Main = () => {
 
@@ -96,8 +98,14 @@ const Main = () => {
     return (
         <div className='main'>
             <Editor />
+            <ModalFAQs />
             <ScrollSet />
-            <Hero />
+            <OpenFAQsBtn />
+            <Hero 
+                audioRef = { audioRef } 
+                handlePlayPause = { handlePlayPause } 
+                handleStop = { handleStop }
+            />
             <VinylLibrary 
                 audioRef = { audioRef } 
                 sounds = { sounds }

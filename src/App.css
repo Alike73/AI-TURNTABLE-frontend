@@ -7,6 +7,22 @@
   background: var(--bg-modal-body);
 }
 
+.faqs_open_btn_wrapper {
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  top: 10%;
+  left: 0%;
+  transform: rotate(-90deg);
+  z-index: 100;
+}
+.faqs_open_btn {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: var(--text-shadow);
+}
+
 @media (min-width: 1630px) and (max-width: 1870px) {
   .caption-shadow figcaption span {
     font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-sm4));
@@ -90,15 +106,18 @@
 }
 
 @media all and (max-width: 500px) {
+  .faqs_open_btn_wrapper {
+    left: -2%;
+  }
   .icon-position{
     right: 5px;
-}
-.icon-position2{
-    right: 5px;
-}
+  }
+  .icon-position2{
+      right: 5px;
+  }
   .alienVinyl {
     width: 250px;
-    margin-top: -30px;
+    /* margin-top: -30px; */
   }
   .turntable {
     height: 526px;

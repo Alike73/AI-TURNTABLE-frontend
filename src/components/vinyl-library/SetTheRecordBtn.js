@@ -2,7 +2,7 @@ import React from 'react';
 import { IoPlayOutline } from "react-icons/io5";
 import { useDispatch, useSelector } from 'react-redux';
 import { getFadeVinyl, setFadeVinyl, setVinylCover, setVinylRecordLink, setVinylTitle } from '../../redux/VinylRecordSlice';
-import { setActiveArm, setIsPlaying } from '../../redux/AudioSlice';
+import { setActiveArm, setIsPlaying, setShowHeroPlayer } from '../../redux/AudioSlice';
 
 const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, setActiveRecord, audioRef }) => {
 
@@ -34,6 +34,7 @@ const SetTheRecordBtn = ({ vinylCover, title, soundLink, recordId, isActive, set
         dispatch(setVinylCover(vinylCover))
         dispatch(setVinylTitle(title))
         dispatch(setVinylRecordLink(soundLink))
+        dispatch(setShowHeroPlayer(true))
 
 
         // Clear previous timeout if it exists

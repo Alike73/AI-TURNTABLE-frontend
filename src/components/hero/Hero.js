@@ -5,14 +5,18 @@ import Swal from 'sweetalert2';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
-import { getIsPlayingAudio } from '../../redux/AudioSlice';
+import { getHeroPlayer, getIsPlayingAudio } from '../../redux/AudioSlice';
+import HeroVinylControls from './HeroVinylControls';
+import HeroVinylControlsBtnGroup from './HeroVinylControlsBtnGroup';
+import HeroControlsTiming from './HeroControlsTiming';
 
 
-const Hero = () => {
+const Hero = ({ audioRef, handlePlayPause, handleStop }) => {
 
     const adminPass = useSelector(getAdminPass);
     const dispatch = useDispatch();
     const isPlaying = useSelector(getIsPlayingAudio);
+    const showHeroPlayer = useSelector(getHeroPlayer);
 
     const handlePassword = async () => {
         const { value: password } = await Swal.fire({
@@ -42,9 +46,17 @@ const Hero = () => {
                 <div className="row flex-lg-row-reverse justify-content-center g-5 py-5">
                     
                     <div className="col-lg-7 p-0">
-                        <h1 className="display-1 fw-bold lh-1 mb-3">
+                        <h1 className="display-1 fw-bold lh-1 pb-3 mb-5">
                             TurntableTunes
                         </h1>
+
+                        { showHeroPlayer && <HeroControlsTiming /> }
+                        { showHeroPlayer && <HeroVinylControls audioRef = { audioRef } /> }
+                        { showHeroPlayer && <HeroVinylControlsBtnGroup
+                            handlePlayPause = { handlePlayPause } 
+                            handleStop = { handleStop }
+                        />}
+                        
                         
                         
                         {/* <p className="lead">
