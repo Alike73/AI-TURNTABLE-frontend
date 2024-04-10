@@ -38,7 +38,7 @@ const RecordCard = ({ vinylCover, title, soundLink, recordId, isActive, setActiv
                                     setActiveRecord={setActiveRecord} // Pass setActiveRecord function
                                     audioRef = { audioRef } 
                                 />
-                                <img className='card_melody_logo' src={ melodyLogo } alt="melody logo" />
+                                { !isAdmin && <img className='card_melody_logo' src={ melodyLogo } alt="melody logo" />}
                                 { isAdmin && <EditDeleteBtnGroup 
                                     updatingInInput = { updatingInInput } 
                                     deleteSound = { deleteSound } 

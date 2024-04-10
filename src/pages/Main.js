@@ -150,7 +150,7 @@ const Main = () => {
     
 
     return (
-        <div className='main'>
+        <div className='main pb-5'>
             <Editor 
                 handleSubmit = { handleSubmit } 
                 image = { image }

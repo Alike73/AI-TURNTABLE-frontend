@@ -9,7 +9,10 @@
 }
 .no_such_record_content {
     border-radius: calc(var(--l-md1) - var(--l-sm4));
-    background: var(--c-grey);
+    background-color: var(--c-dark);
+    background-image: var(--bg-warning-text);
+    background-position: center;
+    background-size: 4%;
     box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.25), 
         inset 2px 2px 5px rgba(255, 255, 255, 0.5), 
         inset -3px -3px 5px rgba(0, 0, 0, 0.5);

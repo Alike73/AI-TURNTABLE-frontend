@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { getVinylCover, getVinylRecordLink, getVinylTitle } from '../../redux/VinylRecordSlice';
 import TurntableVinyl from './TurntableVinyl';
@@ -9,7 +9,7 @@ import AudioDuration from './AudioDuration';
 import SoundVolume from './SoundVolume';
 import Equalizer2 from './Equalizer2';
 import HomeMade from './HomeMade';
-import { getIsPlayingAudio, getVolume, setIsPlaying, setVolume } from '../../redux/AudioSlice';
+import { getVolume, setVolume } from '../../redux/AudioSlice';
 
 const Turntable = ({ handlePlayPause, handleStop, audioRef }) => {
 
@@ -18,8 +18,6 @@ const Turntable = ({ handlePlayPause, handleStop, audioRef }) => {
     const vinylCover = useSelector(getVinylCover);
     const vinylTitle = useSelector(getVinylTitle);
     const vinylRecordLink = useSelector(getVinylRecordLink);
-
-    const isPlaying = useSelector(getIsPlayingAudio);
     const volume = useSelector(getVolume);
     const dispatch = useDispatch();
 
@@ -37,9 +35,9 @@ const Turntable = ({ handlePlayPause, handleStop, audioRef }) => {
     console.log(vinylRecordLink)
 
     return (
-        <div className='container'>
+        <div className='container pb-5'>
             <audio src={vinylRecordLink} ref={audioRef} loop />
-            <div className="col-10 col-sm-8 col-lg-7 mt-5 mx-auto">
+            <div className="col-10 col-sm-8 col-lg-7 mt-5 mx-auto pb-5">
                 <div className="turntable">
                     <HomeMade />
                     <SoundVolume value={volume} onChange={handleVolumeChange} />

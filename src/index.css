@@ -116,6 +116,7 @@ body {
   --bg-hero: url('./assets/images/AppBg1.jpg');
   --bg-modal-body: url('./assets/images/string-pattern.png');
   --bg-vinyl-base: url('./assets/images/platter-for-vinyl1.png');
+  --bg-warning-text: url('./assets/images/record-grooves-1440x1440-white.png')
 }
 
 @import './ui-style/keyframes.css';

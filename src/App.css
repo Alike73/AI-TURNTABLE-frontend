@@ -11,7 +11,7 @@
   width: fit-content;
   height: fit-content;
   position: fixed;
-  top: 10%;
+  top: 15%;
   left: 0%;
   transform: rotate(-90deg);
   z-index: 100;
@@ -99,10 +99,9 @@
   .slider-track-2 {
       width: 20.375em;
   }
-  
-  /* .play_record_btn .btn_ico {
-    font-size: clamp(var(--l-lg2), calc(var(--size) * 1.4), var(--l-lg3));
-  } */
+  .no_such_record_content {
+    background-size: 20%;
+  }
 }
 
 @media all and (max-width: 500px) {
