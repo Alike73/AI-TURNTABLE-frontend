@@ -6,9 +6,10 @@ export const vinylRecordSlice = createSlice({
     initialState: {
         vinylCover: null,
         vinylTitle: null,
-        vinylCategory: 'ALL',
+        vinylCategory: 'ALL TYPES',
         vinylRecordLink: null,
         fadeViny: false,
+        searchRecordTerm: ''
     },
     reducers: {
         setVinylCover: (state, action) => {
@@ -26,6 +27,9 @@ export const vinylRecordSlice = createSlice({
         setFadeVinyl: (state, action) => {
             state.fadeViny = action.payload;
         },
+        setSearchRecordTerm: (state, action) => {
+            state.searchRecordTerm = action.payload;
+        }
     },
     
 });
@@ -35,5 +39,6 @@ export const getVinylTitle = state => state.vinylRecordItems.vinylTitle;
 export const getVinylCategory = state => state.vinylRecordItems.vinylCategory;
 export const getVinylRecordLink = state => state.vinylRecordItems.vinylRecordLink;
 export const getFadeVinyl = state => state.vinylRecordItems.fadeViny;
-export const { setVinylCover, setVinylTitle, setVinylCategory, setVinylRecordLink, setFadeVinyl } = vinylRecordSlice.actions;
+export const getSearchRecordTerm = state => state.vinylRecordItems.searchRecordTerm;
+export const { setVinylCover, setVinylTitle, setVinylCategory, setVinylRecordLink, setFadeVinyl, setSearchRecordTerm } = vinylRecordSlice.actions;
 export default vinylRecordSlice.reducer;

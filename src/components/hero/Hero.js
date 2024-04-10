@@ -1,7 +1,6 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getAdminPass, setIsAdmin } from '../../redux/AdminSecureSlice';
-import Swal from 'sweetalert2';
+import { getAdminFullName, getAdminPass } from '../../redux/AdminSecureSlice';
 import alienVinyl from '../../assets/images/vinylRecord.png';
 import Equalizer from './Equalizer';
 import dividerRound from '../../assets/images/divider-round-bottom.svg';
@@ -9,35 +8,16 @@ import { getHeroPlayer, getIsPlayingAudio } from '../../redux/AudioSlice';
 import HeroVinylControls from './HeroVinylControls';
 import HeroVinylControlsBtnGroup from './HeroVinylControlsBtnGroup';
 import HeroControlsTiming from './HeroControlsTiming';
+import handlePassword from '../../zxy-utils/zxyUtils';
 
 
 const Hero = ({ audioRef, handlePlayPause, handleStop }) => {
 
+    const adminFullName = useSelector(getAdminFullName);
     const adminPass = useSelector(getAdminPass);
     const dispatch = useDispatch();
     const isPlaying = useSelector(getIsPlayingAudio);
     const showHeroPlayer = useSelector(getHeroPlayer);
-
-    const handlePassword = async () => {
-        const { value: password } = await Swal.fire({
-            title: "Enter your admin password",
-            input: "password",
-            inputLabel: "Password",
-            inputPlaceholder: "Enter your password",
-            inputAttributes: {
-            maxlength: "15",
-            autocapitalize: "off",
-            autocorrect: "off"
-            }
-        });
-        if (password === adminPass) {
-            Swal.fire(`Hello Alimzhan: ${password}`);
-            dispatch(setIsAdmin(true));
-        }else {
-            Swal.fire("Wrong Password!","You entered: "+password,"error");
-            dispatch(setIsAdmin(false));
-        }
-    };
 
     return (
         <div className='hero'>
@@ -56,16 +36,7 @@ const Hero = ({ audioRef, handlePlayPause, handleStop }) => {
                             handlePlayPause = { handlePlayPause } 
                             handleStop = { handleStop }
                         />}
-                        
-                        
-                        
-                        {/* <p className="lead">
-                            Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.
-                        </p> */}
-                        {/* <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-                            <button type="button" className="btn btn-primary btn-lg px-4 me-md-2">Primary</button>
-                            <button type="button" className="btn btn-outline-secondary btn-lg px-4">Default</button>
-                        </div> */}
+
                     </div>
                     <div className="col-10 col-sm-8 col-lg-5 img_container">
                         <img 
@@ -73,7 +44,7 @@ const Hero = ({ audioRef, handlePlayPause, handleStop }) => {
                             className={ `d-block mx-lg-auto img-fluid alienVinyl ${ isPlaying ? "active" : "" }` } 
                             alt="Bootstrap Themes" 
                             loading="lazy" 
-                            onClick={ handlePassword } 
+                            onClick={() => handlePassword(adminFullName, adminPass, dispatch)} 
                         />
                     </div>
                 </div>

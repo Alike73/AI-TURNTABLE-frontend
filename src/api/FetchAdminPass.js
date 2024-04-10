@@ -5,10 +5,10 @@ const myURL = 'http://localhost:8000';
 
 
 // GET:
-const getMeAdmin = (setIsAdminPass) => {
+const getMeAdmin = (setAdminUtils) => {
     axios.get(`${myURL}/getMyAdminPass`)
-    .then(({data}) => {// console.log(data)
-        setIsAdminPass(data)
+    .then(({data}) => {console.log(data)
+        setAdminUtils(data)
     })
 };
 

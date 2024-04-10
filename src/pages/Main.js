@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { addSound, editSound, getSounds } from '../api/FetchRecords';
 import { getMeAdmin } from '../api/FetchAdminPass';
-import { setAdminPass } from '../redux/AdminSecureSlice';
+import { setAdminFullName, setAdminPass } from '../redux/AdminSecureSlice';
 import { setVinylCover, setVinylRecordLink, setVinylTitle } from '../redux/VinylRecordSlice';
 import { getIsPlayingAudio, setActiveArm, setCurrentTime, setIsPlaying, setPlayEqualizer, setResetAnimation, setShowHeroPlayer } from '../redux/AudioSlice';
 import Swal from 'sweetalert2';
@@ -27,9 +27,11 @@ const Main = () => {
     const [recordId, setRecordId] = useState('');
     const [editing, setEditing] = useState(false);
     // --------------------------------------------------------
-    const [isAdminPass, setIsAdminPass] = useState([]);
-    const misterY = isAdminPass.map((item) => (item.password))
+    const [adminUtils, setAdminUtils] = useState([]);
+    const misterZ = adminUtils.map((item) => (item.adminFullName))
+    const misterY = adminUtils.map((item) => (item.password))
     const misterX = misterY[0];
+    const misterXZ = misterZ[0];
     // ------------------------------------------------
     const isPlaying = useSelector(getIsPlayingAudio);
     const audioRef = useRef(null);
@@ -44,14 +46,15 @@ const Main = () => {
     const defaultRecordSound = demoRecord[0]
 
     useEffect(() => {
-        getMeAdmin(setIsAdminPass)
+        getMeAdmin(setAdminUtils)
         dispatch(setAdminPass(misterX))
+        dispatch(setAdminFullName(misterXZ))
         getSounds(setSounds)
         getMusicCategories(setListOfCategories)
         dispatch(setVinylCover(defaultCoverImg))
         dispatch(setVinylTitle(defaultRecordTitle))
         dispatch(setVinylRecordLink(defaultRecordSound))
-    }, [dispatch, misterX, defaultCoverImg, defaultRecordTitle, defaultRecordSound]);
+    }, [dispatch, misterX, misterXZ, defaultCoverImg, defaultRecordTitle, defaultRecordSound]);
 
     // -----------------------------------------------------
     const updatingInInput = (_id, image, title, category, soundLink) => {

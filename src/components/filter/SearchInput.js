@@ -1,7 +1,16 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSearchRecordTerm, setSearchRecordTerm } from '../../redux/VinylRecordSlice';
 
 
 const SearchInput = () => {
+
+    const searchRecordTerm = useSelector(getSearchRecordTerm);
+    const dispatch = useDispatch();
+
+    const handleSearchRecordTerm = (e) => {
+        dispatch(setSearchRecordTerm(e.target.value))
+    }
 
     return (
         <div className="input-wrapper">
@@ -29,7 +38,14 @@ const SearchInput = () => {
                 ></path>
                 </svg>
             </button>
-            <input type="text" name="text" className="input" placeholder="search by record name.." />
+            <input 
+                type="text" 
+                name="text" 
+                className="input" 
+                placeholder="search by record name.."
+                value={ searchRecordTerm }
+                onChange={ handleSearchRecordTerm } 
+            />
         </div>
 
     )

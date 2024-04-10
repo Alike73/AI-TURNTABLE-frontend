@@ -5,15 +5,10 @@ import CategoryBtn from './CategoryBtn';
 import CategoryEditor from '../category-editor/CategoryEditor';
 
 const RecordsFilter = ({ listOfCategories, setListOfCategories }) => {
-
-    // const [listOfCategories, setListOfCategories] = useState([]);
+    
     const [musicCategory, setMusicCategory] = useState("");
     const [musicCategoryId, setMusicCategoryId] = useState("");
     const [editingMusicCategory, setEditingMusicCategory] = useState(false);
-
-    // useEffect(() => {
-    //     getMusicCategories(setListOfCategories)
-    // }, []);
 
     const updatingInCategoryInput = (_id, musicCategory) => {
         setMusicCategoryId(_id)

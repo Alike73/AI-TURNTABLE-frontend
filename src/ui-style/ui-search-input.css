@@ -83,26 +83,13 @@
     box-shadow: inset 0 0 3px 0px #fff3, 0 0 0 5px #0004, 0 0 3px 2px #000, 0 0 15px 0px #0005, 2px 2px 1px 5px #fff4;
 }
 
-.category_indicator {
-    position: absolute;
-    top: 3%;
-    right: 3%;
-    width: 5px;
-    height: 5px;
-    border-radius: 5px;
-    border: 1px solid var(--c-grey-lg);
-    /* background: var(--c-turquoise); */
-    box-shadow: 1px 1px 3px rgba(35, 35, 35, 0.25),
-                inset 1px 1px 3px rgba(255, 255, 255, 0.5),
-                inset -1px -1px 3px rgba(35, 35, 35, 0.5);
-}
-
 .category_button {
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-    height: 2em;
+    height: fit-content;
+    padding: var(--l-sm2) var(--l-sm3);
     border-radius: 10px;
     border: none;
     outline: none;
@@ -115,15 +102,37 @@
     cursor: pointer;
     transition: 0.1s ease-in-out;
 }
-.category_button:active {
+.category_button:active,
+.category_button.active {
     color: var(--c-gold-sm);
     background-image: linear-gradient(-225deg, #A445B2 0%, #D41872 52%, #FF0066 100%);
     text-shadow: var(--text-shadow);
     box-shadow: rgba(0, 0, 0, 0.377) 0px 0px 0px, inset 0.5px 0.5px 4px #000000, #545251 -3.2px -3.2px 8px 0px inset;
 }
+
+.category_indicator {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    border: 1px solid var(--c-grey-lg);
+    box-shadow: 1px 1px 3px rgba(35, 35, 35, 0.25),
+                inset 1px 1px 3px rgba(255, 255, 255, 0.5),
+                inset -1px -1px 3px rgba(35, 35, 35, 0.5);
+    opacity: .6;
+}
+
 .category_button:active ~ .category_indicator {
     background: var(--c-turquoise);
+    opacity: 1;
     scale: 1.1;
+}
+.category_indicator.active {
+    background: var(--c-turquoise);
+    opacity: 1;
+    scale: 1.2;
 }
 
 .category_control_wrapper {
