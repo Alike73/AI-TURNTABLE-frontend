@@ -597,8 +597,13 @@
     border-radius: 50%;
     width: 2em;
     height: 2em;
-    background-image: repeating-conic-gradient(#fff 0deg, #dff5ff 25deg, #a0b6cc 55deg, #7d96af 75deg, #dff5ff 90deg, #7d96af 105deg, #a0b6cc 125deg, #dff5ff 155deg, #fff 180deg);
-    box-shadow: 0 -0.5em 0.5em -0.5em rgba(255, 255, 255, 0.8), 0 0.5em 0.25em rgba(0, 0, 0, 0.2), inset 0 0 0 0.125em rgba(125, 150, 175, 0.8), inset 0 0.0625em 0.0625em 0.1875em rgba(255, 255, 255, 0.6);
+    background-image: repeating-conic-gradient(#fff 0deg, #dff5ff 25deg, 
+        #a0b6cc 55deg, #7d96af 75deg, #dff5ff 90deg, 
+        #7d96af 105deg, #a0b6cc 125deg, #dff5ff 155deg, #fff 180deg);
+    box-shadow: 0 -0.5em 0.5em -0.5em rgba(255, 255, 255, 0.8), 
+        0 0.5em 0.25em rgba(0, 0, 0, 0.2), 
+        inset 0 0 0 0.125em rgba(125, 150, 175, 0.8), 
+        inset 0 0.0625em 0.0625em 0.1875em rgba(255, 255, 255, 0.6);
 }
 .slider-thumb:hover {
     cursor: pointer;

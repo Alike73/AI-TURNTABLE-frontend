@@ -27,24 +27,100 @@
   .caption-shadow figcaption span {
     font-size: clamp(var(--l-sm3), calc(var(--size) * 1.2), var(--l-sm4));
   }
-  /* .play_record_btn .btn_ico {
-    font-size: clamp(var(--l-md3), calc(var(--size) * 1.4), var(--l-lg1));
-  } */
 }
 
 @media (min-width: 1399px) and (max-width: 1630px) {
   .caption-shadow figcaption span {
     font-size: clamp(var(--l-sm2), calc(var(--size) * 1.2), var(--l-sm3));
   }
-  /* .play_record_btn .btn_ico {
-    font-size: clamp(var(--l-md2), calc(var(--size) * 1.4), var(--l-md3) * 1.4);
-  } */
 }
 
 
 @media all and (min-width: 1400px) {
   .card_melody_logo {
     width: 52px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px) {
+  .vinyl_base {
+    width: 355px;
+    height: 355px;
+  }
+  .vinylInner {
+    width: 180px;
+    height: 180px;
+    box-shadow: var(--record-shadow-md);
+  }
+}
+
+@media (min-width: 920px) and (max-width: 1025px) {
+  .vinyl_base {
+    width: 355px;
+    height: 355px;
+  }
+  .vinylInner {
+    width: 180px;
+    height: 180px;
+    box-shadow: var(--record-shadow-md);
+  }
+  .soundVolumeBox {
+    top: 30%;
+    left: -29%;
+  }
+  .homeMade {
+    transform: rotate(-32deg);
+  }
+  .speakerBox {
+    bottom: 14%;
+  }
+  .speaker_wrapper {
+    width: 10rem;
+    height: 10rem;
+  }
+  .speaker {
+    width: 10rem;
+  }
+  .control-buttons-group {
+    bottom: 15%;
+  }
+  .audio-duration {
+    bottom: 3%;
+  }
+  .slider-track-2 {
+    width: 24.375em;
+  }
+  .turntable_arm {
+    width: 110px;
+    top: 7%;
+    right: 2%;
+    transform-origin: 55px 82px;
+  }
+  .turntable_arm.active {
+    transform: rotate(18deg);
+  }
+  .equalizer_2 {
+    top: 51%;
+    right: 7%;
+    height: 75px;
+    padding: .25rem;
+    width: 80px;
+  }
+  .sc_1 {
+    top: 1.8%;
+    left: 2.6%;
+  }
+  .sc_2 {
+    top: 1.8%;
+    right: 2.6%;
+  }
+  .sc_3 {
+    bottom: 1.8%;
+    right: 2.6%;
+  }
+  .sc_4 {
+    bottom: 1.8%;
+    left: 2.6%;
   }
 }
 

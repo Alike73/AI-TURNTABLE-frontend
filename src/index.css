@@ -80,7 +80,28 @@ body {
   0 0 0 112px #ffffff10, 0 0 0 114px #1a1a1a, 
   0 0 0 117px #ffffff10, 0 0 0 119px #1a1a1a, 
   0 0 0 121px #ffffff10, 0 0 0 124px #1a1a1a;
-
+  
+  --record-shadow-md: 
+    0 0 0 2px #ffffff10, 0 0 0 5px #1a1a1a, 
+    0 0 0 6px #ffffff10, 0 0 0 8px #1a1a1a, 
+    0 0 0 10px #ffffff10, 0 0 0 14px #1a1a1a, 
+    0 0 0 16px #ffffff10, 0 0 0 20px #1a1a1a, 
+    0 0 0 23px #ffffff10, 0 0 0 25px #1a1a1a, 
+    0 0 0 26px #ffffff10, 0 0 0 28px #1a1a1a, 
+    0 0 0 30px #ffffff10, 0 0 0 34px #1a1a1a, 
+    0 0 0 36px #ffffff10, 0 0 0 40px #1a1a1a, 
+    0 0 0 42px #ffffff10, 0 0 0 45px #1a1a1a, 
+    0 0 0 46px #ffffff10, 0 0 0 48px #1a1a1a, 
+    0 0 0 50px #ffffff10, 0 0 0 54px #1a1a1a, 
+    0 0 0 56px #ffffff10, 0 0 0 60px #1a1a1a, 
+    0 0 0 63px #ffffff10, 0 0 0 65px #1a1a1a, 
+    0 0 0 66px #ffffff10, 0 0 0 68px #1a1a1a, 
+    0 0 0 70px #ffffff10, 0 0 0 74px #1a1a1a, 
+    0 0 0 76px #ffffff10, 0 0 0 80px #1a1a1a,
+    0 0 0 83px #ffffff10, 0 0 0 85px #1a1a1a, 
+    0 0 0 86px #ffffff10, 0 0 0 88px #1a1a1a, 
+    0 0 0 90px #ffffff10, 0 0 0 94px #1a1a1a, 
+    0 0 0 96px #ffffff10, 0 0 0 100px #1a1a1a;
   /*  rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px */
   /* , 
   0 0 0 108px #ffffff10, 0 0 0 110px #1a1a1a, 
@@ -92,7 +113,19 @@ body {
   0 0 0 137px #ffffff10, 0 0 0 139px #1a1a1a, 
   0 0 0 142px #ffffff10, 0 0 0 146px #1a1a1a */
 
-  --record-shadow-sm: 0 0 0 2px #ffffff10, 0 0 0 5px #1a1a1a, 0 0 0 6px #ffffff10, 0 0 0 8px #1a1a1a, 0 0 0 10px #ffffff10, 0 0 0 14px #1a1a1a, 0 0 0 16px #ffffff10, 0 0 0 20px #1a1a1a, 0 0 0 23px #ffffff10, 0 0 0 25px #1a1a1a, 0 0 0 26px #ffffff10, 0 0 0 28px #1a1a1a, 0 0 0 30px #ffffff10, 0 0 0 34px #1a1a1a, 0 0 0 36px #ffffff10, 0 0 0 40px #1a1a1a, 0 0 0 42px #ffffff10, 0 0 0 45px #1a1a1a, 0 0 0 46px #ffffff10, 0 0 0 48px #1a1a1a, 0 0 0 50px #ffffff10, 0 0 0 54px #1a1a1a, 0 0 0 56px #ffffff10;
+  --record-shadow-sm: 
+  0 0 0 2px #ffffff10, 0 0 0 5px #1a1a1a, 
+  0 0 0 6px #ffffff10, 0 0 0 8px #1a1a1a, 
+  0 0 0 10px #ffffff10, 0 0 0 14px #1a1a1a, 
+  0 0 0 16px #ffffff10, 0 0 0 20px #1a1a1a, 
+  0 0 0 23px #ffffff10, 0 0 0 25px #1a1a1a, 
+  0 0 0 26px #ffffff10, 0 0 0 28px #1a1a1a, 
+  0 0 0 30px #ffffff10, 0 0 0 34px #1a1a1a, 
+  0 0 0 36px #ffffff10, 0 0 0 40px #1a1a1a, 
+  0 0 0 42px #ffffff10, 0 0 0 45px #1a1a1a, 
+  0 0 0 46px #ffffff10, 0 0 0 48px #1a1a1a, 
+  0 0 0 50px #ffffff10, 0 0 0 54px #1a1a1a, 
+  0 0 0 56px #ffffff10;
 
   
   --transition-sm: 125ms ease-in-out;
