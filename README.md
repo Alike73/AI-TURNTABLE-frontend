@@ -1,5 +1,5 @@
 
-![Create your swift notes](./src/assets/images/turntable-image.png)
+<img src="./src/assets/images/turntable-image.png" alt="turntable" width="200"/>
 
 # Vinyl Player React App
 
