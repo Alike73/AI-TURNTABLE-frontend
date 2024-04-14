@@ -2,7 +2,7 @@
 <img src="./src/assets/images/turntable-image.png" alt="turntable" width="200"/>
 
 # Vinyl Player React App
-[Live Demo](https://jovial-druid-3760a8.netlify.app/)
+[Live Demo](https://to-fix-later.app/)
 
 Welcome to the Vinyl Player React App! This application allows users to immerse themselves in the nostalgic experience of listening to music on a vintage turntable, all within the comfort of their web browser. Users can select their favorite tracks and watch as the vinyl spins and the music plays.
 
