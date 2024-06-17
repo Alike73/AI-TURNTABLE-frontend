@@ -14,6 +14,7 @@ import Editor from '../components/editor/Editor';
 import OpenFAQsBtn from '../components/faqs/OpenFAQsBtn';
 import ModalFAQs from '../components/faqs/ModalFAQs';
 import { getMusicCategories } from '../api/FetchMusicCategory';
+import Footer from '../components/footer/Footer';
 
 const Main = () => {
 
@@ -190,6 +191,7 @@ const Main = () => {
                 handleStop = { handleStop } 
                 audioRef = { audioRef }
             />
+            <Footer />
         </div>
     )
 };
