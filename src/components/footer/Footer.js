@@ -12,7 +12,7 @@ const Footer = () => {
             <p className="text-center text-body-secondary">© { year } Alec Dev</p>
             <p className="text-center text-body-secondary">
                 If you have any questions just mail me:
-                <a className='ms-2' href="#abc">alimzhanisla@gmail.com</a>
+                <a className='ms-2' href="mailto:alimzhanisla@gmail.com">AlecDev</a>
             </p>
         </footer>
     )
