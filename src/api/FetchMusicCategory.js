@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const myURL = 'http://localhost:8000';
+const myURL = 'https://ai-turntable-backend.onrender.com';
+
+// ---> http://localhost:8000
 
 const getMusicCategories = (setListOfCategories) => {
     axios.get(`${myURL}/getMusicCategories`)
