@@ -3,6 +3,7 @@ import axios from 'axios';
 const myURL = 'https://ai-turntable-backend.onrender.com';
 
 // ---> http://localhost:8000
+// ---> https://ai-turntable-backend.onrender.com
 
 const getSounds = (setSounds) => {
     axios.get(`${myURL}`)
